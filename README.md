@@ -1,5 +1,5 @@
 PyChatApp
 =========
 
-A simple Chat App written in python
-* Forked from arti95 broker.py
+A simple Chat App written in python<br>
+Forked from arti95 broker.py
