@@ -2,4 +2,8 @@ PyChatApp
 =========
 
 A simple Chat App written in python<br>
-Forked from arti95 broker.py
+TODO:<br>
+- Edit server and client so they can send text any time<br>
+- Create web interface<br>
+- fork arti95 broker.py<br>
+- make arti95 broker.py usable(for me)
