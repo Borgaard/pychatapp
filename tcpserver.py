@@ -1,7 +1,7 @@
 import socket
 import sys
 global welmsg
-welmsg = "mikroskeem chat 0.1 alpha :)))"
+welmsg = "mikroskeem pychat first release"
 # Create a TCP/IP socket
 global sock
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
