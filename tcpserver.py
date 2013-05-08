@@ -6,7 +6,7 @@ welmsg = "mikroskeem pychat first release"
 global sock
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Bind the socket to the address given on the command line
-server_address = ('', 1000)
+server_address = ('', 1025)
 sock.bind(server_address)
 print >>sys.stderr, 'starting up on %s port %s' % sock.getsockname()
 
