@@ -27,7 +27,7 @@ class BrokerServer(NetstringReceiver):
 
     def stringReceived(self, line):
         for uuid, conn in self.cons.iteritems():
-              print(line)
+              print(self.uuid[24:], ": ",  line)
               #if uuid != self.uuid: #don't send packet back to the originating clien
                 #conn.sendString(line)
 

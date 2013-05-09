@@ -9,23 +9,21 @@ from twisted.protocols.basic import NetstringReceiver
 from twisted.python import log
 import msgpack
 import sys
-print("Due to connection bug, run me twice :)")
-global no_err
-no_err = 0
+print("Due to bug, run me twice :)")
 class BrokerClient(NetstringReceiver):
+ 
     def connectionMade(self):
         print("Connected")
-        no_err = 1
-        msg = msgpack.dumps(raw_input("Send text: "))
+        #msg = msgpack.dumps({"type":"test", "Hello":"World"})
+        msg = raw_input("Send text: ")
         self.sendString(msg)
-
+ 
     def connectionLost(self, reason):
         print("Connection Lost")
-        no_err = 0
-
+ 
     def stringReceived(self, line):
         print("recived:", msgpack.loads(line))
-
+ 
 class BrokerFactory(ReconnectingClientFactory):
     protocol = BrokerClient
  

@@ -23,7 +23,7 @@ def head():
  connection.sendall(welmsg)
  switchmode(2)
 def body():
- data = connection.recv(30)
+ data = connection.recv(99999999)
  print >>sys.stderr, 'received "%s"' % data
  msg = raw_input("Send response: ")
  if msg =="exit":

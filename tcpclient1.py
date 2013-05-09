@@ -23,7 +23,7 @@ while running:
  amount_received = 0
  amount_expected = len(message)
  while amount_received < amount_expected:
-  data = sock.recv(30)
+  data = sock.recv(999999999)
   amount_received += len(data)
   print >>sys.stderr, 'received "%s"' % data
   amount_expected = 0
