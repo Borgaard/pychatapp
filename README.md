@@ -5,5 +5,5 @@ A simple Chat App written in python<br>
 TODO:<br>
 - Edit server and client so they can send text any time<br>
 - Create web interface<br>
-- </strike>fork arti95 broker.py<br>
+- <strike>fork arti95 broker.py<br>
 - make arti95 broker.py usable(for me)</strike>
