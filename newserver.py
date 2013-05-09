@@ -14,7 +14,7 @@ class BrokerServer(NetstringReceiver):
 
     def __init__(self, cons):
         self.cons = cons #connections from facotry
-        self.uuid = str(get_uuid()) #this connection uuid
+        self.uuid = str(get_uuid()) #connection uuid
 
     def connectionMade(self):
         self.cons[self.uuid] = self

@@ -24,7 +24,7 @@ class BrokerClient(NetstringReceiver):
         no_err = 0
 
     def stringReceived(self, line):
-        print("recived:", msgpack.loads(line))
+        print("Recived:", msgpack.loads(line))
 
 class BrokerFactory(ReconnectingClientFactory):
     protocol = BrokerClient
