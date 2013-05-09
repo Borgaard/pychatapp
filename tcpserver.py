@@ -1,7 +1,7 @@
 import socket
 import sys
 global welmsg
-welmsg = "mikroskeem pychat first release"
+welmsg = "mikroskeem pychat"
 # Create a TCP/IP socket
 global sock
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -38,7 +38,7 @@ def body():
   connection.sendall(msg)
   print >>sys.stderr, 'sended "%s"' % msg
   print "waiting message..."
-
+  switchmode(2)
 funcmap = {1: head, 2: body}
 def switchmode(a):
  funcmap[a]()
