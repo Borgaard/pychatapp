@@ -7,7 +7,6 @@ from twisted.internet import reactor
 from twisted.internet.protocol import ReconnectingClientFactory
 from twisted.protocols.basic import NetstringReceiver
 from twisted.python import log
-import msgpack
 import sys
 print("Due to connection bug, run me twice :)")
 global no_err
@@ -24,7 +23,7 @@ class BrokerClient(NetstringReceiver):
         no_err = 0
 
     def stringReceived(self, line):
-        print("Recived:", msgpack.loads(line))
+        print("Recived:", line)
 
 class BrokerFactory(ReconnectingClientFactory):
     protocol = BrokerClient
